@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:you_read_app_flutter/custome_widget/home_page/app_bar_icon.dart';
 import 'package:you_read_app_flutter/custome_widget/home_page/home_page_app_bar.dart';
 import 'package:you_read_app_flutter/custome_widget/home_page/row_text_widget.dart';
@@ -7,6 +8,7 @@ import 'package:you_read_app_flutter/screens/home_page_body/carocel_slider.dart'
 import 'package:you_read_app_flutter/screens/home_page_body/home_page_book_category.dart';
 import 'package:you_read_app_flutter/screens/home_page_body/home_page_items.dart';
 import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:you_read_app_flutter/screens/notification_page/notification_page.dart';
 import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 class HomePageBody extends StatefulWidget {
@@ -33,7 +35,11 @@ class _HomePageBodyState extends State<HomePageBody> {
             iconData: Icons.search,
           ),
           IconButtonWidget(
-            iconButtonOnPress: () {},
+            iconButtonOnPress: () {
+              Get.to(
+                const NotificationPage(),
+              );
+            },
             iconData: FontAwesomeIcons.bell,
             iconColor: Colors.white,
           ),
