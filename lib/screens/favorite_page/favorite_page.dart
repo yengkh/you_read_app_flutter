@@ -1,8 +1,12 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:you_read_app_flutter/database/favorite_database_helper.dart';
 import 'package:you_read_app_flutter/models/favorite_model.dart';
+import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:you_read_app_flutter/screens/favorite_page/read_page_from_favorite.dart';
+import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 class FavoritePageTwo extends StatefulWidget {
   const FavoritePageTwo({super.key});
@@ -22,9 +26,9 @@ class _FavoritePageTwoState extends State<FavoritePageTwo> {
       //backgroundColor: ThemDataClass.bodyColor,
       appBar: AppBar(
         backgroundColor: Colors.blue[400],
-        title: const Text(
-          "Your Favorite Books",
-          style: TextStyle(color: Colors.white),
+        title: Text(
+          easy_localization.tr(LocaleKeys.your_favorite_books),
+          style: const TextStyle(color: Colors.white),
         ),
         centerTitle: true,
       ),
@@ -116,9 +120,10 @@ class _FavoritePageTwoState extends State<FavoritePageTwo> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        const Text(
-                                          "Name : ",
-                                          style: TextStyle(color: Colors.white),
+                                        Text(
+                                          easy_localization.tr(LocaleKeys.name),
+                                          style: const TextStyle(
+                                              color: Colors.white),
                                         ),
                                         Expanded(
                                           child: Text(
@@ -135,9 +140,11 @@ class _FavoritePageTwoState extends State<FavoritePageTwo> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        const Text(
-                                          "Author : ",
-                                          style: TextStyle(color: Colors.white),
+                                        Text(
+                                          easy_localization
+                                              .tr(LocaleKeys.author),
+                                          style: const TextStyle(
+                                              color: Colors.white),
                                         ),
                                         Expanded(
                                           child: Text(
@@ -152,9 +159,10 @@ class _FavoritePageTwoState extends State<FavoritePageTwo> {
                                     ),
                                     Row(
                                       children: [
-                                        const Text(
-                                          "Type : ",
-                                          style: TextStyle(color: Colors.white),
+                                        Text(
+                                          easy_localization.tr(LocaleKeys.type),
+                                          style: const TextStyle(
+                                              color: Colors.white),
                                         ),
                                         Text(
                                           data.type,
@@ -183,10 +191,24 @@ class _FavoritePageTwoState extends State<FavoritePageTwo> {
                                                 Colors.white,
                                               ),
                                             ),
-                                            onPressed: () {},
-                                            child: const Text(
-                                              "Read",
-                                              style: TextStyle(
+                                            onPressed: () {
+                                              Get.to(
+                                                ReadPageFromFavorite(
+                                                  author: data.author,
+                                                  desc: data.name,
+                                                  downloaded: data.name,
+                                                  file: data.file,
+                                                  id: data.name,
+                                                  image: data.image,
+                                                  name: data.name,
+                                                  type: data.type,
+                                                ),
+                                              );
+                                            },
+                                            child: Text(
+                                              easy_localization
+                                                  .tr(LocaleKeys.read),
+                                              style: const TextStyle(
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -207,19 +229,20 @@ class _FavoritePageTwoState extends State<FavoritePageTwo> {
                                                   .deleteFavoriteById(data.id!);
                                               ScaffoldMessenger.of(context)
                                                   .showSnackBar(
-                                                const SnackBar(
-                                                  content: Text(
-                                                    "Book has removed from favorite!",
-                                                  ),
-                                                  duration:
-                                                      Duration(seconds: 2),
+                                                SnackBar(
+                                                  content: Text(easy_localization
+                                                      .tr(LocaleKeys
+                                                          .boo_removed_from_favorite)),
+                                                  duration: const Duration(
+                                                      seconds: 2),
                                                 ),
                                               );
                                               setState(() {}); // Refresh UI
                                             },
-                                            child: const Text(
-                                              "Remove From Favorite",
-                                              style: TextStyle(
+                                            child: Text(
+                                              easy_localization.tr(LocaleKeys
+                                                  .remove_from_favorite),
+                                              style: const TextStyle(
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -257,7 +280,9 @@ class _FavoritePageTwoState extends State<FavoritePageTwo> {
                 const SizedBox(
                   height: 10.0,
                 ),
-                const Text("Favorite page is empty!"),
+                Text(
+                  easy_localization.tr(LocaleKeys.favorite_page_is_empty),
+                ),
               ],
             ),
           );

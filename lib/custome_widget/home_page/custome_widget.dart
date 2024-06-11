@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:you_read_app_flutter/custome_widget/text_widget/text_widget_item.dart';
 import 'package:you_read_app_flutter/screens/read_page/read_page_from_home_page.dart';
+import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 // ignore: must_be_immutable
 class CustomeWidgetItems extends StatefulWidget {
@@ -94,9 +96,9 @@ class _CustomeWidgetItemsState extends State<CustomeWidgetItems> {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      "Name : ",
-                      style: TextStyle(
+                    Text(
+                      easy_localization.tr(LocaleKeys.name),
+                      style: const TextStyle(
                         fontWeight: FontWeight.w800,
                         fontSize: 16.0,
                         color: Colors.white,
@@ -117,9 +119,9 @@ class _CustomeWidgetItemsState extends State<CustomeWidgetItems> {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      "Author : ",
-                      style: TextStyle(
+                    Text(
+                      easy_localization.tr(LocaleKeys.author),
+                      style: const TextStyle(
                         fontWeight: FontWeight.w800,
                         fontSize: 16.0,
                         color: Colors.white,
@@ -140,9 +142,9 @@ class _CustomeWidgetItemsState extends State<CustomeWidgetItems> {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const TextItemsWidget(
-                      title: "Type : ",
-                      styles: TextStyle(
+                    TextItemsWidget(
+                      title: easy_localization.tr(LocaleKeys.type),
+                      styles: const TextStyle(
                         fontWeight: FontWeight.w800,
                         fontSize: 16.0,
                         color: Colors.white,
@@ -168,9 +170,9 @@ class _CustomeWidgetItemsState extends State<CustomeWidgetItems> {
                         ),
                       ),
                       onPressed: () {},
-                      child: const Text(
-                        "Detail",
-                        style: TextStyle(
+                      child: Text(
+                        easy_localization.tr(LocaleKeys.detail),
+                        style: const TextStyle(
                           fontSize: 16.0,
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -201,9 +203,9 @@ class _CustomeWidgetItemsState extends State<CustomeWidgetItems> {
                           ),
                         );
                       },
-                      child: const Text(
-                        "Read",
-                        style: TextStyle(
+                      child: Text(
+                        easy_localization.tr(LocaleKeys.read),
+                        style: const TextStyle(
                           fontSize: 16.0,
                           color: Colors.black,
                           fontWeight: FontWeight.bold,

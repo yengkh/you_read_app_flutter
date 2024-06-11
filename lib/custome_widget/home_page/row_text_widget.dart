@@ -28,7 +28,7 @@ class _RowTextWidgetState extends State<RowTextWidget> {
       ),
       child: TextWidget(
         title: widget.title,
-        fontSize: widget.sized,
+        fontSize: 18,
         textColor: widget.textColor,
       ),
     );

@@ -5,6 +5,8 @@ import 'package:you_read_app_flutter/api/book_type_api.dart';
 import 'package:you_read_app_flutter/custome_widget/home_page/book_type_page_controller.dart';
 import 'package:you_read_app_flutter/custome_widget/home_page/book_type_shimmer.dart';
 import 'package:you_read_app_flutter/models/book_type_model.dart';
+import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 class HomePageBookCatrgories extends StatefulWidget {
   const HomePageBookCatrgories({super.key});
@@ -14,6 +16,31 @@ class HomePageBookCatrgories extends StatefulWidget {
 }
 
 class _HomePageBookCatrgoriesState extends State<HomePageBookCatrgories> {
+  late List<String> bookType;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _updateBookTypeList();
+  }
+
+  void _updateBookTypeList() {
+    setState(() {
+      bookType = [
+        easy_localization.tr(LocaleKeys.leadership),
+        easy_localization.tr(LocaleKeys.children),
+        easy_localization.tr(LocaleKeys.education),
+        easy_localization.tr(LocaleKeys.language),
+        easy_localization.tr(LocaleKeys.nature),
+        easy_localization.tr(LocaleKeys.business),
+        easy_localization.tr(LocaleKeys.religion),
+        easy_localization.tr(LocaleKeys.technology),
+        easy_localization.tr(LocaleKeys.technology),
+        easy_localization.tr(LocaleKeys.not_show),
+      ];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -26,33 +53,36 @@ class _HomePageBookCatrgoriesState extends State<HomePageBookCatrgories> {
           return SizedBox(
             height: 150.0,
             child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 120.0,
-                          width: 120.0,
-                          child: Image.asset(
-                            "assets/images/image-loading-failed-02.png",
-                            fit: BoxFit.cover,
-                          ),
+              scrollDirection: Axis.horizontal,
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 120.0,
+                        width: 120.0,
+                        child: Image.asset(
+                          "assets/images/image-loading-failed-02.png",
+                          fit: BoxFit.cover,
                         ),
-                        Container(
-                          padding: const EdgeInsets.all(5.0),
-                          decoration: BoxDecoration(
-                            color: Colors.grey[300],
-                            borderRadius: BorderRadius.circular(5.0),
-                          ),
-                          child: const Text("Something Wrong!"),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(5.0),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(5.0),
                         ),
-                      ],
-                    ),
-                  );
-                }),
+                        child: Text(
+                          easy_localization.tr(LocaleKeys.something_wrong),
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
           );
         } else {
           List<BookTypeModel> datas = snapshot.data!;
@@ -101,7 +131,7 @@ class _HomePageBookCatrgoriesState extends State<HomePageBookCatrgories> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         child: Text(
-                          data.name,
+                          bookType[index],
                           style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,

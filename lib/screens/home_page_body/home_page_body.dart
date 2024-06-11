@@ -6,6 +6,8 @@ import 'package:you_read_app_flutter/custome_widget/home_page/row_text_widget.da
 import 'package:you_read_app_flutter/screens/home_page_body/carocel_slider.dart';
 import 'package:you_read_app_flutter/screens/home_page_body/home_page_book_category.dart';
 import 'package:you_read_app_flutter/screens/home_page_body/home_page_items.dart';
+import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 class HomePageBody extends StatefulWidget {
   const HomePageBody({super.key});
@@ -15,8 +17,8 @@ class HomePageBody extends StatefulWidget {
 }
 
 class _HomePageBodyState extends State<HomePageBody> {
-  String title = "Book Types";
-  String secondTitle = "Explor here";
+  String title = easy_localization.tr(LocaleKeys.book_types);
+  String secondTitle = easy_localization.tr(LocaleKeys.explore_here);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,12 +52,10 @@ class _HomePageBodyState extends State<HomePageBody> {
             const CarouselWidget(),
             RowTextWidget(
               title: title,
-              //sized: FontSizeClass.brfontsize18,
             ),
             const HomePageBookCatrgories(),
             RowTextWidget(
               title: secondTitle,
-              //sized: FontSizeClass.brfontsize18,
             ),
             const HomePageItems(),
             const SizedBox(

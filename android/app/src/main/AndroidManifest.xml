@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="you_read_app_flutter"
+        android:label="You Read"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/you_read">
         <activity
             android:name=".MainActivity"
             android:exported="true"

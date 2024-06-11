@@ -2,6 +2,8 @@ import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:you_read_app_flutter/database/download_database_helper.dart';
 import 'package:you_read_app_flutter/models/download_model.dart';
+import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 class DownloadPage extends StatefulWidget {
   const DownloadPage({super.key});
@@ -21,9 +23,9 @@ class _DownloadPageState extends State<DownloadPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[400],
-        title: const Text(
-          "Download Books",
-          style: TextStyle(color: Colors.white),
+        title: Text(
+          easy_localization.tr(LocaleKeys.books_downloaded),
+          style: const TextStyle(color: Colors.white),
         ),
         centerTitle: true,
       ),
@@ -122,12 +124,18 @@ class _DownloadPageState extends State<DownloadPage> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        const Text("Name : "),
+                                        Text(
+                                          easy_localization.tr(LocaleKeys.name),
+                                          style: const TextStyle(
+                                              color: Colors.white),
+                                        ),
                                         Expanded(
                                           child: Text(
                                             data.name,
                                             maxLines: 2,
                                             overflow: TextOverflow.ellipsis,
+                                            style: const TextStyle(
+                                                color: Colors.white),
                                           ),
                                         ),
                                       ],
@@ -136,20 +144,35 @@ class _DownloadPageState extends State<DownloadPage> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        const Text("Author : "),
+                                        Text(
+                                          easy_localization
+                                              .tr(LocaleKeys.author),
+                                          style: const TextStyle(
+                                              color: Colors.white),
+                                        ),
                                         Expanded(
                                           child: Text(
                                             data.author,
                                             maxLines: 1,
                                             overflow: TextOverflow.ellipsis,
+                                            style: const TextStyle(
+                                                color: Colors.white),
                                           ),
                                         ),
                                       ],
                                     ),
                                     Row(
                                       children: [
-                                        const Text("Type : "),
-                                        Text(data.type),
+                                        Text(
+                                          easy_localization.tr(LocaleKeys.type),
+                                          style: const TextStyle(
+                                              color: Colors.white),
+                                        ),
+                                        Text(
+                                          data.type,
+                                          style: const TextStyle(
+                                              color: Colors.white),
+                                        ),
                                       ],
                                     ),
                                     const SizedBox(
@@ -173,9 +196,10 @@ class _DownloadPageState extends State<DownloadPage> {
                                               ),
                                             ),
                                             onPressed: () {},
-                                            child: const Text(
-                                              "Read",
-                                              style: TextStyle(
+                                            child: Text(
+                                              easy_localization
+                                                  .tr(LocaleKeys.read),
+                                              style: const TextStyle(
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -197,19 +221,22 @@ class _DownloadPageState extends State<DownloadPage> {
                                                       data.id!);
                                               ScaffoldMessenger.of(context)
                                                   .showSnackBar(
-                                                const SnackBar(
+                                                SnackBar(
                                                   content: Text(
-                                                    "Book has deleted from Download!",
+                                                    easy_localization.tr(LocaleKeys
+                                                        .book_has_remove_from_download),
                                                   ),
-                                                  duration:
-                                                      Duration(seconds: 2),
+                                                  duration: const Duration(
+                                                    seconds: 2,
+                                                  ),
                                                 ),
                                               );
                                               setState(() {}); // Refresh UI
                                             },
-                                            child: const Text(
-                                              "Delete",
-                                              style: TextStyle(
+                                            child: Text(
+                                              easy_localization
+                                                  .tr(LocaleKeys.delete),
+                                              style: const TextStyle(
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -244,7 +271,7 @@ class _DownloadPageState extends State<DownloadPage> {
                 const SizedBox(
                   height: 10.0,
                 ),
-                const Text("Sorr, No book was Downloaded!"),
+                Text(easy_localization.tr(LocaleKeys.no_book_has_downloaded)),
               ],
             ),
           );

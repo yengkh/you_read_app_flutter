@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 class ReadPageItemInfo extends StatelessWidget {
   const ReadPageItemInfo({
@@ -19,18 +21,18 @@ class ReadPageItemInfo extends StatelessWidget {
             Radius.circular(5.0),
           ),
         ),
-        child: const Row(
+        child: Row(
           children: [
-            Icon(
+            const Icon(
               Icons.info,
               color: Colors.white,
             ),
-            SizedBox(
+            const SizedBox(
               width: 8.0,
             ),
             Text(
-              "See book detail",
-              style: TextStyle(
+              easy_localization.tr(LocaleKeys.see_book_detail),
+              style: const TextStyle(
                 color: Colors.white,
               ),
             ),

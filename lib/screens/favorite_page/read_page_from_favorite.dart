@@ -9,7 +9,6 @@ import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:you_read_app_flutter/database/download_database_helper.dart';
-import 'package:you_read_app_flutter/database/favorite_database_helper.dart';
 import 'package:you_read_app_flutter/models/add_to_favorite_model.dart';
 import 'package:you_read_app_flutter/models/download_model.dart';
 import 'package:you_read_app_flutter/models/favorite_model.dart';
@@ -17,8 +16,8 @@ import 'package:you_read_app_flutter/screens/read_page/read_page_infor.dart';
 import 'package:you_read_app_flutter/screens/read_page/read_page_item.dart';
 import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
-class ReadPageFromHomePage extends StatefulWidget {
-  const ReadPageFromHomePage({
+class ReadPageFromFavorite extends StatefulWidget {
+  const ReadPageFromFavorite({
     super.key,
     required this.id,
     required this.name,
@@ -44,10 +43,10 @@ class ReadPageFromHomePage extends StatefulWidget {
   final DownloadModel? downloadModel;
 
   @override
-  State<ReadPageFromHomePage> createState() => _ReadPageFromHomePageState();
+  State<ReadPageFromFavorite> createState() => _ReadPageFromFavoriteState();
 }
 
-class _ReadPageFromHomePageState extends State<ReadPageFromHomePage> {
+class _ReadPageFromFavoriteState extends State<ReadPageFromFavorite> {
   final String fileUrl = "";
 
   // Function to download file from the internet
@@ -125,43 +124,19 @@ class _ReadPageFromHomePageState extends State<ReadPageFromHomePage> {
                 builder: (BuildContext context) {
                   return Dialog(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(0),
+                      borderRadius: BorderRadius.circular(5.0),
                     ),
                     child: Container(
-                      height: 200.0,
+                      height: 150.0,
                       padding: const EdgeInsets.symmetric(
                           vertical: 20.0, horizontal: 8.0),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           ReadPageItem(
-                            iconData: Icons.favorite,
-                            title: easy_localization
-                                .tr(LocaleKeys.add_book_to_favorite),
-                            snackBarTitle: easy_localization
-                                .tr(LocaleKeys.book_added_to_favorite),
-                            onTapEvent: () async {
-                              final FavoriteModel data = FavoriteModel(
-                                id: widget.sqlModel?.id,
-                                name: widget.name,
-                                author: widget.author,
-                                type: widget.type,
-                                file: widget.file,
-                                image: widget.image,
-                              );
-
-                              if (widget.sqlModel == null) {
-                                await FavoriteDatabaseHelper.addToFavorite(
-                                    data);
-                              } else {
-                                await FavoriteDatabaseHelper.updateFavorite(
-                                    data);
-                              }
-                            },
-                          ),
-                          ReadPageItem(
                             iconData: Icons.download,
-                            title: "Download Book",
+                            title:
+                                easy_localization.tr(LocaleKeys.download_book),
                             onTapEvent: () {
                               downloadFile(
                                 fileUrl:
@@ -170,7 +145,8 @@ class _ReadPageFromHomePageState extends State<ReadPageFromHomePage> {
                                     "http://192.168.43.83:8080/images/${widget.image}",
                               );
                             },
-                            snackBarTitle: "Downloading...",
+                            snackBarTitle:
+                                easy_localization.tr(LocaleKeys.downloading),
                           ),
                           const ReadPageItemInfo(),
                         ],

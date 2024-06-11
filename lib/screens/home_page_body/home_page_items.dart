@@ -3,6 +3,8 @@ import 'package:you_read_app_flutter/api/book_item_api.dart';
 import 'package:you_read_app_flutter/custome_widget/home_page/book_items_shimmer.dart';
 import 'package:you_read_app_flutter/custome_widget/home_page/custome_widget.dart';
 import 'package:you_read_app_flutter/models/book_model.dart';
+import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 class HomePageItems extends StatefulWidget {
   const HomePageItems({super.key});
@@ -47,8 +49,9 @@ class _HomePageItemsState extends State<HomePageItems> {
                         const SizedBox(
                           height: 15.0,
                         ),
-                        const Text("Something Wrong!"),
-                        const Text("Try to check internet connection!")
+                        Text(easy_localization.tr(LocaleKeys.something_wrong)),
+                        Text(easy_localization
+                            .tr(LocaleKeys.try_to_check_internet_connection))
                       ],
                     ),
                   ),

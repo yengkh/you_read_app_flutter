@@ -1,0 +1,4 @@
+// For easy Localization 
+flutter pub run easy_localization:generate -S "assets/translation" -O "lib/translations" 
+
+flutter pub run easy_localization:generate -S "assets/translation" -O "lib/translations" -o "locale_key.g.dart" -f keys

@@ -17,8 +17,8 @@ import 'package:you_read_app_flutter/screens/read_page/read_page_infor.dart';
 import 'package:you_read_app_flutter/screens/read_page/read_page_item.dart';
 import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
-class ReadPageFromHomePage extends StatefulWidget {
-  const ReadPageFromHomePage({
+class ReadPageFromBookCategory extends StatefulWidget {
+  const ReadPageFromBookCategory({
     super.key,
     required this.id,
     required this.name,
@@ -44,10 +44,11 @@ class ReadPageFromHomePage extends StatefulWidget {
   final DownloadModel? downloadModel;
 
   @override
-  State<ReadPageFromHomePage> createState() => _ReadPageFromHomePageState();
+  State<ReadPageFromBookCategory> createState() =>
+      _ReadPageFromBookCategoryState();
 }
 
-class _ReadPageFromHomePageState extends State<ReadPageFromHomePage> {
+class _ReadPageFromBookCategoryState extends State<ReadPageFromBookCategory> {
   final String fileUrl = "";
 
   // Function to download file from the internet
@@ -125,14 +126,14 @@ class _ReadPageFromHomePageState extends State<ReadPageFromHomePage> {
                 builder: (BuildContext context) {
                   return Dialog(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(0),
+                      borderRadius: BorderRadius.circular(5.0),
                     ),
                     child: Container(
                       height: 200.0,
                       padding: const EdgeInsets.symmetric(
                           vertical: 20.0, horizontal: 8.0),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           ReadPageItem(
                             iconData: Icons.favorite,
@@ -161,7 +162,8 @@ class _ReadPageFromHomePageState extends State<ReadPageFromHomePage> {
                           ),
                           ReadPageItem(
                             iconData: Icons.download,
-                            title: "Download Book",
+                            title:
+                                easy_localization.tr(LocaleKeys.download_book),
                             onTapEvent: () {
                               downloadFile(
                                 fileUrl:
@@ -170,7 +172,8 @@ class _ReadPageFromHomePageState extends State<ReadPageFromHomePage> {
                                     "http://192.168.43.83:8080/images/${widget.image}",
                               );
                             },
-                            snackBarTitle: "Downloading...",
+                            snackBarTitle:
+                                easy_localization.tr(LocaleKeys.downloading),
                           ),
                           const ReadPageItemInfo(),
                         ],
