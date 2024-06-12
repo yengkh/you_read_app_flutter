@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:you_read_app_flutter/custome_widget/text_widget/text_widget.dart';
 
-class RowTextWidget extends StatefulWidget {
+class RowTextWidget extends StatelessWidget {
   const RowTextWidget({
     super.key,
     this.title,
-    this.sized,
     this.textColor,
+    this.iconData,
+    this.iconSize,
   });
   final String? title;
-  final double? sized;
+  final IconData? iconData;
+  final double? iconSize;
   final Color? textColor;
 
-  @override
-  State<RowTextWidget> createState() => _RowTextWidgetState();
-}
-
-class _RowTextWidgetState extends State<RowTextWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -27,9 +24,11 @@ class _RowTextWidgetState extends State<RowTextWidget> {
         bottom: 10.0,
       ),
       child: TextWidget(
-        title: widget.title,
+        iconData: iconData,
+        iconSize: iconSize,
+        title: title,
         fontSize: 18,
-        textColor: widget.textColor,
+        textColor: textColor,
       ),
     );
   }

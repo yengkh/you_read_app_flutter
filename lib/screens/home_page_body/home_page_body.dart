@@ -9,6 +9,7 @@ import 'package:you_read_app_flutter/screens/home_page_body/home_page_book_categ
 import 'package:you_read_app_flutter/screens/home_page_body/home_page_items.dart';
 import 'package:easy_localization/easy_localization.dart' as easy_localization;
 import 'package:you_read_app_flutter/screens/notification_page/notification_page.dart';
+import 'package:you_read_app_flutter/screens/search_page/search_page.dart';
 import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 class HomePageBody extends StatefulWidget {
@@ -29,7 +30,9 @@ class _HomePageBodyState extends State<HomePageBody> {
         title: const HomePageAppBar(),
         actions: [
           IconButtonWidget(
-            iconButtonOnPress: () {},
+            iconButtonOnPress: () {
+              Get.to(() => const SearchPage(),);
+            },
             iconColor: Colors.white,
             iconSized: 25.0,
             iconData: Icons.search,
@@ -57,11 +60,21 @@ class _HomePageBodyState extends State<HomePageBody> {
             ),
             const CarouselWidget(),
             RowTextWidget(
+              iconData: FontAwesomeIcons.layerGroup,
+              iconSize: 20.0,
               title: title,
+            ),
+            const SizedBox(
+              height: 10.0,
             ),
             const HomePageBookCatrgories(),
             RowTextWidget(
+              iconSize: 20.0,
+              iconData: FontAwesomeIcons.list,
               title: secondTitle,
+            ),
+            const SizedBox(
+              height: 10.0,
             ),
             const HomePageItems(),
             const SizedBox(

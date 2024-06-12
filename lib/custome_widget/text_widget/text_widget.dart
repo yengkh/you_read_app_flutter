@@ -1,29 +1,40 @@
 import 'package:flutter/material.dart';
 
-class TextWidget extends StatefulWidget {
+class TextWidget extends StatelessWidget {
   const TextWidget({
     super.key,
     this.title,
     this.fontSize,
     this.textColor,
+    this.iconData,
+    this.iconSize,
   });
   final String? title;
   final double? fontSize;
   final Color? textColor;
+  final IconData? iconData;
+  final double? iconSize;
 
-  @override
-  State<TextWidget> createState() => _TextWidgetState();
-}
-
-class _TextWidgetState extends State<TextWidget> {
   @override
   Widget build(BuildContext context) {
-    return Text(
-      widget.title!,
-      style: TextStyle(
-        fontSize: widget.fontSize,
-        color: widget.textColor,
-      ),
+    return Row(
+      children: [
+        Icon(
+          iconData,
+          size: iconSize,
+        ),
+        const SizedBox(
+          width: 10.0,
+        ),
+        Text(
+          title!,
+          style: TextStyle(
+            fontSize: fontSize,
+            color: textColor,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
     );
   }
 }

@@ -40,5 +40,11 @@
   "downloading": "正在下载...",
   "add_book_to_favorite": "将书添加到收藏夹",
   "book_added_to_favorite": "本书已添加至收藏夹！",
-  "see_book_detail": "详见书籍详情"
+  "see_book_detail": "详见书籍详情",
+  "tap_to_search": "点按即可搜索...",
+  "no_book_found": "没有找到书！",
+  "try_again": "再试一次",
+  "please_connect_to_internet_first": "请先连接到互联网！",
+  "view_downloaded_book": "查看已下载的书籍",
+  "no_internet_connection": "没有网络连接"
 }

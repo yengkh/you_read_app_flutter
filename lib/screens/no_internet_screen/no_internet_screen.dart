@@ -2,6 +2,8 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:you_read_app_flutter/screens/download_page/download_page.dart';
 import 'package:you_read_app_flutter/screens/home_pages/home_page.dart';
+import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 class NoInternetScreen extends StatefulWidget {
   const NoInternetScreen({super.key});
@@ -21,11 +23,11 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
     var connectivityResult = await Connectivity().checkConnectivity();
     if (connectivityResult.contains(ConnectivityResult.none)) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
+        SnackBar(
           content: Text(
-            "Please connect to internet first!",
+            easy_localization.tr(LocaleKeys.please_connect_to_internet_first),
           ),
-          duration: Duration(seconds: 2),
+          duration: const Duration(seconds: 2),
         ),
       );
     } else {
@@ -51,9 +53,9 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
               height: 250,
               fit: BoxFit.contain,
             ),
-            const Text(
-              'No Internet Connection',
-              style: TextStyle(fontSize: 18.0),
+            Text(
+              easy_localization.tr(LocaleKeys.no_internet_connection),
+              style: const TextStyle(fontSize: 18.0),
             ),
             const SizedBox(
               height: 80.0,
@@ -69,9 +71,9 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
                   onPressed: () {
                     checkInternetConnection();
                   },
-                  child: const Text(
-                    "Try Again",
-                    style: TextStyle(
+                  child: Text(
+                    easy_localization.tr(LocaleKeys.try_again),
+                    style: const TextStyle(
                       fontSize: 16.0,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -94,9 +96,9 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
                       ),
                     );
                   },
-                  child: const Text(
-                    "View Download",
-                    style: TextStyle(
+                  child: Text(
+                    easy_localization.tr(LocaleKeys.view_downloaded_book),
+                    style: const TextStyle(
                       fontSize: 16.0,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,

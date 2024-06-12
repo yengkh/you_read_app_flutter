@@ -40,5 +40,11 @@
   "downloading": "កំពុងទាញយក...",
   "add_book_to_favorite": "បន្ថែមសៀវភៅទៅចំណូលចិត្ត",
   "book_added_to_favorite": "សៀវភៅត្រូវបានបន្ថែមទៅសំណព្វ!",
-  "see_book_detail": "សូមមើលសៀវភៅលម្អិត"
+  "see_book_detail": "សូមមើលសៀវភៅលម្អិត",
+  "tap_to_search": "ស្វែងរក...",
+  "no_book_found": "រកមិនឃើញសៀវភៅទេ!",
+  "try_again": "ព្យាយាម​ម្តង​ទៀត",
+  "please_connect_to_internet_first": "សូមភ្ជាប់អ៊ីនធឺណិតជាមុនសិន!",
+  "view_downloaded_book": "មើលសៀវភៅដែលបានទាញយក",
+  "no_internet_connection": "គ្មានការភ្ជាប់អ៊ីនធឺណិត"
 }

@@ -40,5 +40,11 @@
   "downloading": "Wird heruntergeladen...",
   "add_book_to_favorite": "Buch zum Favoriten hinzufügen",
   "book_added_to_favorite": "Buch zum Favoriten hinzugefügt!",
-  "see_book_detail": "Siehe Buchdetails"
+  "see_book_detail": "Siehe Buchdetails",
+  "tap_to_search": "Zum Suchen tippen...",
+  "no_book_found": "Keine Bücher gefunden!",
+  "try_again": "Versuchen Sie es erneut",
+  "please_connect_to_internet_first": "Bitte stellen Sie zunächst eine Internetverbindung her!",
+  "view_downloaded_book": "Heruntergeladene Bücher anzeigen",
+  "no_internet_connection": "Keine Internetverbindung"
 }

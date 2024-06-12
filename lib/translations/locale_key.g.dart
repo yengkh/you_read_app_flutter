@@ -43,5 +43,11 @@ abstract class  LocaleKeys {
   static const add_book_to_favorite = 'add_book_to_favorite';
   static const book_added_to_favorite = 'book_added_to_favorite';
   static const see_book_detail = 'see_book_detail';
+  static const tap_to_search = 'tap_to_search';
+  static const no_book_found = 'no_book_found';
+  static const try_again = 'try_again';
+  static const please_connect_to_internet_first = 'please_connect_to_internet_first';
+  static const view_downloaded_book = 'view_downloaded_book';
+  static const no_internet_connection = 'no_internet_connection';
 
 }

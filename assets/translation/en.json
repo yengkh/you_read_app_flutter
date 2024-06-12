@@ -40,5 +40,11 @@
   "downloading": "Downloading...",
   "add_book_to_favorite": "Add book to favorite",
   "book_added_to_favorite": "Book added to Favorite!",
-  "see_book_detail": "See book detail"
+  "see_book_detail": "See book detail",
+  "tap_to_search": "Tap to search...",
+  "no_book_found": "No Books Finded!",
+  "try_again": "Try Again",
+  "please_connect_to_internet_first": "Please connect to internet first!",
+  "view_downloaded_book": "View Downloaded books",
+  "no_internet_connection": "No Internet Connection"
 }

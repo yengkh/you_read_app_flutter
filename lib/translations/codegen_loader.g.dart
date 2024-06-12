@@ -56,7 +56,13 @@ class CodegenLoader extends AssetLoader{
   "downloading": "Wird heruntergeladen...",
   "add_book_to_favorite": "Buch zum Favoriten hinzufügen",
   "book_added_to_favorite": "Buch zum Favoriten hinzugefügt!",
-  "see_book_detail": "Siehe Buchdetails"
+  "see_book_detail": "Siehe Buchdetails",
+  "tap_to_search": "Zum Suchen tippen...",
+  "no_book_found": "Keine Bücher gefunden!",
+  "try_again": "Versuchen Sie es erneut",
+  "please_connect_to_internet_first": "Bitte stellen Sie zunächst eine Internetverbindung her!",
+  "view_downloaded_book": "Heruntergeladene Bücher anzeigen",
+  "no_internet_connection": "Keine Internetverbindung"
 };
 static const Map<String,dynamic> en = {
   "hello_text": "Hello",
@@ -100,7 +106,13 @@ static const Map<String,dynamic> en = {
   "downloading": "Downloading...",
   "add_book_to_favorite": "Add book to favorite",
   "book_added_to_favorite": "Book added to Favorite!",
-  "see_book_detail": "See book detail"
+  "see_book_detail": "See book detail",
+  "tap_to_search": "Tap to search...",
+  "no_book_found": "No Books Finded!",
+  "try_again": "Try Again",
+  "please_connect_to_internet_first": "Please connect to internet first!",
+  "view_downloaded_book": "View Downloaded books",
+  "no_internet_connection": "No Internet Connection"
 };
 static const Map<String,dynamic> km = {
   "hello_text": "សួស្តី",
@@ -144,7 +156,13 @@ static const Map<String,dynamic> km = {
   "downloading": "កំពុងទាញយក...",
   "add_book_to_favorite": "បន្ថែមសៀវភៅទៅចំណូលចិត្ត",
   "book_added_to_favorite": "សៀវភៅត្រូវបានបន្ថែមទៅសំណព្វ!",
-  "see_book_detail": "សូមមើលសៀវភៅលម្អិត"
+  "see_book_detail": "សូមមើលសៀវភៅលម្អិត",
+  "tap_to_search": "ស្វែងរក...",
+  "no_book_found": "រកមិនឃើញសៀវភៅទេ!",
+  "try_again": "ព្យាយាម​ម្តង​ទៀត",
+  "please_connect_to_internet_first": "សូមភ្ជាប់អ៊ីនធឺណិតជាមុនសិន!",
+  "view_downloaded_book": "មើលសៀវភៅដែលបានទាញយក",
+  "no_internet_connection": "គ្មានការភ្ជាប់អ៊ីនធឺណិត"
 };
 static const Map<String,dynamic> zh = {
   "hello_text": "你好",
@@ -188,7 +206,13 @@ static const Map<String,dynamic> zh = {
   "downloading": "正在下载...",
   "add_book_to_favorite": "将书添加到收藏夹",
   "book_added_to_favorite": "本书已添加至收藏夹！",
-  "see_book_detail": "详见书籍详情"
+  "see_book_detail": "详见书籍详情",
+  "tap_to_search": "点按即可搜索...",
+  "no_book_found": "没有找到书！",
+  "try_again": "再试一次",
+  "please_connect_to_internet_first": "请先连接到互联网！",
+  "view_downloaded_book": "查看已下载的书籍",
+  "no_internet_connection": "没有网络连接"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"de": de, "en": en, "km": km, "zh": zh};
 }
