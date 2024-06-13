@@ -1,8 +1,10 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:you_read_app_flutter/database/download_database_helper.dart';
 import 'package:you_read_app_flutter/models/download_model.dart';
 import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:you_read_app_flutter/screens/read_page/read_page_from_download.dart';
 import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 class DownloadPage extends StatefulWidget {
@@ -166,12 +168,14 @@ class _DownloadPageState extends State<DownloadPage> {
                                         Text(
                                           easy_localization.tr(LocaleKeys.type),
                                           style: const TextStyle(
-                                              color: Colors.white),
+                                            color: Colors.white,
+                                          ),
                                         ),
                                         Text(
                                           data.type,
                                           style: const TextStyle(
-                                              color: Colors.white),
+                                            color: Colors.white,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -189,13 +193,21 @@ class _DownloadPageState extends State<DownloadPage> {
                                             style: const ButtonStyle(
                                               minimumSize:
                                                   WidgetStatePropertyAll(
-                                                      Size(200, 20)),
+                                                Size(200, 20),
+                                              ),
                                               backgroundColor:
                                                   WidgetStatePropertyAll(
                                                 Colors.white,
                                               ),
                                             ),
-                                            onPressed: () {},
+                                            onPressed: () {
+                                              Get.to(
+                                                () => ReadPageFromDownload(
+                                                  name: data.name,
+                                                  file: data.file,
+                                                ),
+                                              );
+                                            },
                                             child: Text(
                                               easy_localization
                                                   .tr(LocaleKeys.read),
@@ -209,7 +221,8 @@ class _DownloadPageState extends State<DownloadPage> {
                                             style: const ButtonStyle(
                                               minimumSize:
                                                   WidgetStatePropertyAll(
-                                                      Size(200, 20)),
+                                                Size(200, 20),
+                                              ),
                                               backgroundColor:
                                                   WidgetStatePropertyAll(
                                                 Colors.white,

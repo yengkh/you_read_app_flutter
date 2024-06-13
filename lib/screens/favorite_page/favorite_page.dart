@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:you_read_app_flutter/database/favorite_database_helper.dart';
 import 'package:you_read_app_flutter/models/favorite_model.dart';
 import 'package:easy_localization/easy_localization.dart' as easy_localization;
-import 'package:you_read_app_flutter/screens/favorite_page/read_page_from_favorite.dart';
+import 'package:you_read_app_flutter/screens/read_page/read_page_from_favorite.dart';
 import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 class FavoritePageTwo extends StatefulWidget {
@@ -218,7 +218,7 @@ class _FavoritePageTwoState extends State<FavoritePageTwo> {
                                             style: const ButtonStyle(
                                               minimumSize:
                                                   WidgetStatePropertyAll(
-                                                      Size(200, 20)),
+                                                      Size(200, 20),),
                                               backgroundColor:
                                                   WidgetStatePropertyAll(
                                                 Colors.white,

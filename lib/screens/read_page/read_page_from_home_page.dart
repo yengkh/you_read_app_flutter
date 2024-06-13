@@ -8,6 +8,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:you_read_app_flutter/classes/save_file_to_storage.dart';
 import 'package:you_read_app_flutter/database/download_database_helper.dart';
 import 'package:you_read_app_flutter/database/favorite_database_helper.dart';
 import 'package:you_read_app_flutter/models/add_to_favorite_model.dart';
@@ -163,11 +164,21 @@ class _ReadPageFromHomePageState extends State<ReadPageFromHomePage> {
                             iconData: Icons.download,
                             title: "Download Book",
                             onTapEvent: () {
-                              downloadFile(
+                              // downloadFile(
+                              //   fileUrl:
+                              //       "http://192.168.43.83:8080/files/${widget.file}",
+                              //   imageUrl:
+                              //       "http://192.168.43.83:8080/images/${widget.image}",
+                              // );
+                              DownloadService.downloadFile(
                                 fileUrl:
                                     "http://192.168.43.83:8080/files/${widget.file}",
                                 imageUrl:
                                     "http://192.168.43.83:8080/images/${widget.image}",
+                                name: widget.name,
+                                author: widget.author,
+                                type: widget.type,
+                                fileName: widget.file,
                               );
                             },
                             snackBarTitle: "Downloading...",

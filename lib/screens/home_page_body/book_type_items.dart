@@ -2,7 +2,6 @@ import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:easy_localization/easy_localization.dart' as easy_localization;
@@ -103,6 +102,7 @@ class _BookTypeItemAllItemsState extends State<BookTypeItemAllItems> {
                           children: [
                             Container(
                               decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5.0),
                                 boxShadow: [
                                   BoxShadow(
                                     color: activeColor
