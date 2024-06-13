@@ -1,5 +1,6 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -9,6 +10,15 @@ import 'package:you_read_app_flutter/translations/codegen_loader.g.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      apiKey: 'AIzaSyDggHnb5pOGh9Kc1NvkESjO1YyD37R71Eo',
+      appId: '1:396792424952:android:8582aed716003cf405ce0d',
+      messagingSenderId: 'sendid',
+      projectId: 'you-read-app-87d3d',
+      storageBucket: 'you-read-app-87d3d.appspot.com',
+    ),
+  );
   await EasyLocalization.ensureInitialized();
   runApp(
     EasyLocalization(
@@ -28,8 +38,6 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(

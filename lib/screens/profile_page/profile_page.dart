@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:you_read_app_flutter/classes/google_account_login_service.dart';
+import 'package:you_read_app_flutter/custome_widget/profile_page_widget/profile_page_item_widget.dart';
 import 'package:you_read_app_flutter/translations/locale_key.g.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -12,8 +14,8 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  bool _isDisable = true;
-  bool _focus = false;
+  bool isDisable = true;
+  bool focus = false;
   final bool _isLogin = false;
   final TextEditingController _phone = TextEditingController();
   @override
@@ -78,8 +80,8 @@ class _ProfilePageState extends State<ProfilePage> {
                     // for version 2 and greater youcan also use this
                     FilteringTextInputFormatter.digitsOnly
                   ],
-                  autofocus: _focus,
-                  readOnly: _isDisable,
+                  autofocus: focus,
+                  readOnly: isDisable,
                   decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(15.0),
                     border: InputBorder.none,
@@ -87,8 +89,8 @@ class _ProfilePageState extends State<ProfilePage> {
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
-                          _isDisable = false;
-                          _focus = true;
+                          isDisable = false;
+                          focus = true;
                         });
                       },
                       icon: const Icon(Icons.edit),
@@ -132,7 +134,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         children: [
                           IconButton(
                             onPressed: () {
-                              //AuthService.signInwithGoogle();
+                              AuthorService.singInWithGoogle();
                             },
                             icon: const Icon(
                               FontAwesomeIcons.google,
@@ -162,32 +164,6 @@ class _ProfilePageState extends State<ProfilePage> {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class ProfileItem extends StatelessWidget {
-  const ProfileItem({
-    super.key,
-    required this.title,
-    required this.iconsLeading,
-  });
-  final String title;
-  final IconData iconsLeading;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(5.0),
-        ),
-      ),
-      tileColor: Colors.blue,
-      title: Text(title),
-      leading: Icon(
-        iconsLeading,
       ),
     );
   }

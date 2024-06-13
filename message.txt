@@ -2,3 +2,10 @@
 flutter pub run easy_localization:generate -S "assets/translation" -O "lib/translations" 
 
 flutter pub run easy_localization:generate -S "assets/translation" -O "lib/translations" -o "locale_key.g.dart" -f keys
+
+
+// For android when we use with firebaseAuth we need to add fingerprint to it :
+    - we can use keytool -list -v \
+    -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.keystore
+    - or navigate to keytool dir it place in C:\Windows\System32\cmd.exe and then hit cmd to open cmd and run commande keytool -list -v -alias androiddebugkey -keystore debug.keystore
+        and copy SHA1 and SHA256 an pass it to figerprint on firebase console

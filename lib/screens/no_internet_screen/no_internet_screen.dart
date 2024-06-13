@@ -1,5 +1,6 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:you_read_app_flutter/custome_widget/no_internet_checker/no_internet_checker_widget.dart';
 import 'package:you_read_app_flutter/screens/download_page/download_page.dart';
 import 'package:you_read_app_flutter/screens/home_pages/home_page.dart';
 import 'package:easy_localization/easy_localization.dart' as easy_localization;
@@ -60,35 +61,20 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
             const SizedBox(
               height: 80.0,
             ),
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextButton(
-                  style: TextButton.styleFrom(
-                    minimumSize: const Size(150, 30),
-                    backgroundColor: Colors.blue,
-                  ),
-                  onPressed: () {
+                NoInternetButton(
+                  onTapEvent: () {
                     checkInternetConnection();
                   },
-                  child: Text(
-                    easy_localization.tr(LocaleKeys.try_again),
-                    style: const TextStyle(
-                      fontSize: 16.0,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  title: easy_localization.tr(LocaleKeys.try_again),
                 ),
                 const SizedBox(
-                  width: 20.0,
+                  height: 20.0,
                 ),
-                TextButton(
-                  style: TextButton.styleFrom(
-                    minimumSize: const Size(150, 30),
-                    backgroundColor: Colors.blue,
-                  ),
-                  onPressed: () {
+                NoInternetButton(
+                  onTapEvent: () {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
@@ -96,14 +82,7 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
                       ),
                     );
                   },
-                  child: Text(
-                    easy_localization.tr(LocaleKeys.view_downloaded_book),
-                    style: const TextStyle(
-                      fontSize: 16.0,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  title: easy_localization.tr(LocaleKeys.view_downloaded_book),
                 ),
               ],
             ),
