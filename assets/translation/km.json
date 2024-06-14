@@ -46,5 +46,14 @@
   "try_again": "ព្យាយាម​ម្តង​ទៀត",
   "please_connect_to_internet_first": "សូមភ្ជាប់អ៊ីនធឺណិតជាមុនសិន!",
   "view_downloaded_book": "មើលសៀវភៅដែលបានទាញយក",
-  "no_internet_connection": "គ្មានការភ្ជាប់អ៊ីនធឺណិត"
+  "no_internet_connection": "គ្មានការភ្ជាប់អ៊ីនធឺណិត",
+  "no_phone_number": "គ្មានលេខទូរស័ព្ទ",
+  "please_input_phone_number": "សូមបញ្ចូលលេខទូរស័ព្ទ!",
+  "please_enter_phone_number": "សូមបញ្ចូលលេខទូរស័ព្ទ!",
+  "cancel": "បោះបង់",
+  "ok": "យល់ព្រម",
+  "you_dont_have_acco_yet": "អ្នកមិនទាន់មានគណនីទេ!",
+  "sign_in_with_google": "ចូលជាមួយ Google",
+  "your_phone_number_is_to_short": "លេខទូរស័ព្ទរបស់អ្នកខ្លីពេក!",
+  "your_phone_number_is_too_long": "លេខទូរស័ព្ទរបស់អ្នកវែងពេក!"
 }

@@ -5,9 +5,11 @@ class ProfileItem extends StatelessWidget {
     super.key,
     required this.title,
     required this.iconsLeading,
+    this.textSize,
   });
   final String title;
   final IconData iconsLeading;
+  final double? textSize;
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +20,16 @@ class ProfileItem extends StatelessWidget {
         ),
       ),
       tileColor: Colors.blue,
-      title: Text(title),
+      title: Text(
+        title,
+        style: TextStyle(
+          fontSize: textSize,
+          color: Colors.white,
+        ),
+      ),
       leading: Icon(
         iconsLeading,
+        color: Colors.white,
       ),
     );
   }

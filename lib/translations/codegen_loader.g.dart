@@ -62,7 +62,16 @@ class CodegenLoader extends AssetLoader{
   "try_again": "Versuchen Sie es erneut",
   "please_connect_to_internet_first": "Bitte stellen Sie zunächst eine Internetverbindung her!",
   "view_downloaded_book": "Heruntergeladene Bücher anzeigen",
-  "no_internet_connection": "Keine Internetverbindung"
+  "no_internet_connection": "Keine Internetverbindung",
+  "no_phone_number": "Keine Telefonnummer",
+  "please_input_phone_number": "Bitte Telefonnummer eingeben!",
+  "please_enter_phone_number": "Bitte geben Sie eine Telefonnummer ein!",
+  "cancel": "Stornieren",
+  "ok": "OK",
+  "you_dont_have_acco_yet": "Sie haben noch kein Konto!",
+  "sign_in_with_google": "Anmeldung mit Google",
+  "your_phone_number_is_to_short": "Ihre Telefonnummer ist zu kurz!",
+  "your_phone_number_is_too_long": "Ihre Telefonnummer ist zu lang!"
 };
 static const Map<String,dynamic> en = {
   "hello_text": "Hello",
@@ -112,7 +121,16 @@ static const Map<String,dynamic> en = {
   "try_again": "Try Again",
   "please_connect_to_internet_first": "Please connect to internet first!",
   "view_downloaded_book": "View Downloaded books",
-  "no_internet_connection": "No Internet Connection"
+  "no_internet_connection": "No Internet Connection",
+  "no_phone_number": "No phone number",
+  "please_input_phone_number": "Please input phone number!",
+  "please_enter_phone_number": "Please enter a phone number!",
+  "cancel": "Cancel",
+  "ok": "OK",
+  "you_dont_have_acco_yet": "You do not have account yet!",
+  "sign_in_with_google": "Sign in with Google",
+  "your_phone_number_is_to_short": "Your phone number is too short!",
+  "your_phone_number_is_too_long": "Your phone number is too long!"
 };
 static const Map<String,dynamic> km = {
   "hello_text": "សួស្តី",
@@ -162,7 +180,16 @@ static const Map<String,dynamic> km = {
   "try_again": "ព្យាយាម​ម្តង​ទៀត",
   "please_connect_to_internet_first": "សូមភ្ជាប់អ៊ីនធឺណិតជាមុនសិន!",
   "view_downloaded_book": "មើលសៀវភៅដែលបានទាញយក",
-  "no_internet_connection": "គ្មានការភ្ជាប់អ៊ីនធឺណិត"
+  "no_internet_connection": "គ្មានការភ្ជាប់អ៊ីនធឺណិត",
+  "no_phone_number": "គ្មានលេខទូរស័ព្ទ",
+  "please_input_phone_number": "សូមបញ្ចូលលេខទូរស័ព្ទ!",
+  "please_enter_phone_number": "សូមបញ្ចូលលេខទូរស័ព្ទ!",
+  "cancel": "បោះបង់",
+  "ok": "យល់ព្រម",
+  "you_dont_have_acco_yet": "អ្នកមិនទាន់មានគណនីទេ!",
+  "sign_in_with_google": "ចូលជាមួយ Google",
+  "your_phone_number_is_to_short": "លេខទូរស័ព្ទរបស់អ្នកខ្លីពេក!",
+  "your_phone_number_is_too_long": "លេខទូរស័ព្ទរបស់អ្នកវែងពេក!"
 };
 static const Map<String,dynamic> zh = {
   "hello_text": "你好",
@@ -212,7 +239,16 @@ static const Map<String,dynamic> zh = {
   "try_again": "再试一次",
   "please_connect_to_internet_first": "请先连接到互联网！",
   "view_downloaded_book": "查看已下载的书籍",
-  "no_internet_connection": "没有网络连接"
+  "no_internet_connection": "没有网络连接",
+  "no_phone_number": "没有电话号码",
+  "please_input_phone_number": "请输入电话号码！",
+  "please_enter_phone_number": "请输入电话号码!",
+  "cancel": "取消",
+  "ok": "好的",
+  "you_dont_have_acco_yet": "您还没有帐户！",
+  "sign_in_with_google": "使用 Google 登录",
+  "your_phone_number_is_to_short": "您的电话号码太短！",
+  "your_phone_number_is_too_long": "您的电话号码太长了！"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"de": de, "en": en, "km": km, "zh": zh};
 }

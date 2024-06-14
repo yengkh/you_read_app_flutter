@@ -46,5 +46,14 @@
   "try_again": "再试一次",
   "please_connect_to_internet_first": "请先连接到互联网！",
   "view_downloaded_book": "查看已下载的书籍",
-  "no_internet_connection": "没有网络连接"
+  "no_internet_connection": "没有网络连接",
+  "no_phone_number": "没有电话号码",
+  "please_input_phone_number": "请输入电话号码！",
+  "please_enter_phone_number": "请输入电话号码!",
+  "cancel": "取消",
+  "ok": "好的",
+  "you_dont_have_acco_yet": "您还没有帐户！",
+  "sign_in_with_google": "使用 Google 登录",
+  "your_phone_number_is_to_short": "您的电话号码太短！",
+  "your_phone_number_is_too_long": "您的电话号码太长了！"
 }

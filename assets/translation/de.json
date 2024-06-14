@@ -46,5 +46,14 @@
   "try_again": "Versuchen Sie es erneut",
   "please_connect_to_internet_first": "Bitte stellen Sie zunächst eine Internetverbindung her!",
   "view_downloaded_book": "Heruntergeladene Bücher anzeigen",
-  "no_internet_connection": "Keine Internetverbindung"
+  "no_internet_connection": "Keine Internetverbindung",
+  "no_phone_number": "Keine Telefonnummer",
+  "please_input_phone_number": "Bitte Telefonnummer eingeben!",
+  "please_enter_phone_number": "Bitte geben Sie eine Telefonnummer ein!",
+  "cancel": "Stornieren",
+  "ok": "OK",
+  "you_dont_have_acco_yet": "Sie haben noch kein Konto!",
+  "sign_in_with_google": "Anmeldung mit Google",
+  "your_phone_number_is_to_short": "Ihre Telefonnummer ist zu kurz!",
+  "your_phone_number_is_too_long": "Ihre Telefonnummer ist zu lang!"
 }

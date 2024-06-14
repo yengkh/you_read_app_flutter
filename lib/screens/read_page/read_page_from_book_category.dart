@@ -153,10 +153,12 @@ class _ReadPageFromBookCategoryState extends State<ReadPageFromBookCategory> {
 
                               if (widget.sqlModel == null) {
                                 await FavoriteDatabaseHelper.addToFavorite(
-                                    data);
+                                  data,
+                                );
                               } else {
                                 await FavoriteDatabaseHelper.updateFavorite(
-                                    data);
+                                  data,
+                                );
                               }
                             },
                           ),

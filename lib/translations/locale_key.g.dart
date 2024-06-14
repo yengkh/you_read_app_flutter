@@ -49,5 +49,14 @@ abstract class  LocaleKeys {
   static const please_connect_to_internet_first = 'please_connect_to_internet_first';
   static const view_downloaded_book = 'view_downloaded_book';
   static const no_internet_connection = 'no_internet_connection';
+  static const no_phone_number = 'no_phone_number';
+  static const please_input_phone_number = 'please_input_phone_number';
+  static const please_enter_phone_number = 'please_enter_phone_number';
+  static const cancel = 'cancel';
+  static const ok = 'ok';
+  static const you_dont_have_acco_yet = 'you_dont_have_acco_yet';
+  static const sign_in_with_google = 'sign_in_with_google';
+  static const your_phone_number_is_to_short = 'your_phone_number_is_to_short';
+  static const your_phone_number_is_too_long = 'your_phone_number_is_too_long';
 
 }
