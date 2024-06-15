@@ -55,5 +55,7 @@
   "you_dont_have_acco_yet": "Sie haben noch kein Konto!",
   "sign_in_with_google": "Anmeldung mit Google",
   "your_phone_number_is_to_short": "Ihre Telefonnummer ist zu kurz!",
-  "your_phone_number_is_too_long": "Ihre Telefonnummer ist zu lang!"
+  "your_phone_number_is_too_long": "Ihre Telefonnummer ist zu lang!",
+  "reader": "Leser",
+  "which_book_do_you_want_to_read_today": "Welches Buch möchtest du heute lesen?"
 }

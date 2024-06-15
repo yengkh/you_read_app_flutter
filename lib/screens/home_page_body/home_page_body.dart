@@ -1,8 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:you_read_app_flutter/custome_widget/home_page/app_bar_icon.dart';
-import 'package:you_read_app_flutter/custome_widget/home_page/home_page_app_bar.dart';
 import 'package:you_read_app_flutter/custome_widget/home_page/row_text_widget.dart';
 import 'package:you_read_app_flutter/screens/home_page_body/carocel_slider.dart';
 import 'package:you_read_app_flutter/screens/home_page_body/home_page_book_category.dart';
@@ -20,6 +20,21 @@ class HomePageBody extends StatefulWidget {
 }
 
 class _HomePageBodyState extends State<HomePageBody> {
+  User? _user;
+  @override
+  void initState() {
+    super.initState();
+    _user = FirebaseAuth.instance.currentUser;
+    _checkUser();
+  }
+
+  Future<void> _checkUser() async {
+    User? user = FirebaseAuth.instance.currentUser;
+    setState(() {
+      _user = user;
+    });
+  }
+
   String title = easy_localization.tr(LocaleKeys.book_types);
   String secondTitle = easy_localization.tr(LocaleKeys.explore_here);
   @override
@@ -27,11 +42,35 @@ class _HomePageBodyState extends State<HomePageBody> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[400],
-        title: const HomePageAppBar(),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              easy_localization.tr(LocaleKeys.hello_text),
+              style: const TextStyle(fontSize: 16, color: Colors.white),
+            ),
+            Text(
+              _user != null
+                  ? _user!.displayName!
+                  : easy_localization.tr(LocaleKeys.reader),
+              style: const TextStyle(color: Colors.white, fontSize: 14),
+            ),
+            Text(
+              easy_localization
+                  .tr(LocaleKeys.which_book_do_you_want_to_read_today),
+              style: const TextStyle(color: Colors.white, fontSize: 11),
+            ),
+            const SizedBox(
+              height: 2,
+            ),
+          ],
+        ),
         actions: [
           IconButtonWidget(
             iconButtonOnPress: () {
-              Get.to(() => const SearchPage(),);
+              Get.to(
+                () => const SearchPage(),
+              );
             },
             iconColor: Colors.white,
             iconSized: 25.0,

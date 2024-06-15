@@ -71,7 +71,9 @@ class CodegenLoader extends AssetLoader{
   "you_dont_have_acco_yet": "Sie haben noch kein Konto!",
   "sign_in_with_google": "Anmeldung mit Google",
   "your_phone_number_is_to_short": "Ihre Telefonnummer ist zu kurz!",
-  "your_phone_number_is_too_long": "Ihre Telefonnummer ist zu lang!"
+  "your_phone_number_is_too_long": "Ihre Telefonnummer ist zu lang!",
+  "reader": "Leser",
+  "which_book_do_you_want_to_read_today": "Welches Buch möchtest du heute lesen?"
 };
 static const Map<String,dynamic> en = {
   "hello_text": "Hello",
@@ -130,7 +132,9 @@ static const Map<String,dynamic> en = {
   "you_dont_have_acco_yet": "You do not have account yet!",
   "sign_in_with_google": "Sign in with Google",
   "your_phone_number_is_to_short": "Your phone number is too short!",
-  "your_phone_number_is_too_long": "Your phone number is too long!"
+  "your_phone_number_is_too_long": "Your phone number is too long!",
+  "reader": "Reader",
+  "which_book_do_you_want_to_read_today": "Which book do you want to read today?"
 };
 static const Map<String,dynamic> km = {
   "hello_text": "សួស្តី",
@@ -189,7 +193,9 @@ static const Map<String,dynamic> km = {
   "you_dont_have_acco_yet": "អ្នកមិនទាន់មានគណនីទេ!",
   "sign_in_with_google": "ចូលជាមួយ Google",
   "your_phone_number_is_to_short": "លេខទូរស័ព្ទរបស់អ្នកខ្លីពេក!",
-  "your_phone_number_is_too_long": "លេខទូរស័ព្ទរបស់អ្នកវែងពេក!"
+  "your_phone_number_is_too_long": "លេខទូរស័ព្ទរបស់អ្នកវែងពេក!",
+  "reader": "អ្នកអាន",
+  "which_book_do_you_want_to_read_today": "តើអ្នកចង់អានសៀវភៅមួយណាថ្ងៃនេះ?"
 };
 static const Map<String,dynamic> zh = {
   "hello_text": "你好",
@@ -248,7 +254,9 @@ static const Map<String,dynamic> zh = {
   "you_dont_have_acco_yet": "您还没有帐户！",
   "sign_in_with_google": "使用 Google 登录",
   "your_phone_number_is_to_short": "您的电话号码太短！",
-  "your_phone_number_is_too_long": "您的电话号码太长了！"
+  "your_phone_number_is_too_long": "您的电话号码太长了！",
+  "reader": "读者",
+  "which_book_do_you_want_to_read_today": "今天你想读哪本书？"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"de": de, "en": en, "km": km, "zh": zh};
 }

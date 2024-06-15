@@ -58,5 +58,7 @@ abstract class  LocaleKeys {
   static const sign_in_with_google = 'sign_in_with_google';
   static const your_phone_number_is_to_short = 'your_phone_number_is_to_short';
   static const your_phone_number_is_too_long = 'your_phone_number_is_too_long';
+  static const reader = 'reader';
+  static const which_book_do_you_want_to_read_today = 'which_book_do_you_want_to_read_today';
 
 }

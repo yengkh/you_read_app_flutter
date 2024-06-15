@@ -55,5 +55,7 @@
   "you_dont_have_acco_yet": "អ្នកមិនទាន់មានគណនីទេ!",
   "sign_in_with_google": "ចូលជាមួយ Google",
   "your_phone_number_is_to_short": "លេខទូរស័ព្ទរបស់អ្នកខ្លីពេក!",
-  "your_phone_number_is_too_long": "លេខទូរស័ព្ទរបស់អ្នកវែងពេក!"
+  "your_phone_number_is_too_long": "លេខទូរស័ព្ទរបស់អ្នកវែងពេក!",
+  "reader": "អ្នកអាន",
+  "which_book_do_you_want_to_read_today": "តើអ្នកចង់អានសៀវភៅមួយណាថ្ងៃនេះ?"
 }

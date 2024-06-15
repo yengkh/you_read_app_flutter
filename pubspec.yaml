@@ -37,6 +37,8 @@ dependencies:
   firebase_core: ^3.0.0
   firebase_auth: ^5.0.0
   flutter_slidable: ^3.1.0
+  flutter_native_splash: ^2.4.0
+  firebase_messaging: ^15.0.1
 
 dev_dependencies:
   flutter_test:
@@ -61,6 +63,13 @@ flutter_launcher_icons:
   macos:
     generate: true
     image_path: "assets/images/open-book.png"
+
+flutter_native_splash:
+  android: true
+  ios: true
+  web: false
+  background_image: "assets/images/aesthetic-rainbow-mobile-vbzogqw7nkfx6zq3.jpg"
+  image: "assets/images/open-book.png"
 
 flutter:
   uses-material-design: true

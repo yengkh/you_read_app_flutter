@@ -55,5 +55,7 @@
   "you_dont_have_acco_yet": "您还没有帐户！",
   "sign_in_with_google": "使用 Google 登录",
   "your_phone_number_is_to_short": "您的电话号码太短！",
-  "your_phone_number_is_too_long": "您的电话号码太长了！"
+  "your_phone_number_is_too_long": "您的电话号码太长了！",
+  "reader": "读者",
+  "which_book_do_you_want_to_read_today": "今天你想读哪本书？"
 }
