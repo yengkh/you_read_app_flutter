@@ -78,9 +78,7 @@ class _HomePageBodyState extends State<HomePageBody> {
           ),
           IconButtonWidget(
             iconButtonOnPress: () {
-              Get.to(
-                const NotificationPage(),
-              );
+              Get.to(() => const NotificationPage());
             },
             iconData: FontAwesomeIcons.bell,
             iconColor: Colors.white,

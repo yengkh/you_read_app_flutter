@@ -57,5 +57,7 @@
   "your_phone_number_is_to_short": "您的电话号码太短！",
   "your_phone_number_is_too_long": "您的电话号码太长了！",
   "reader": "读者",
-  "which_book_do_you_want_to_read_today": "今天你想读哪本书？"
+  "which_book_do_you_want_to_read_today": "今天你想读哪本书？",
+  "notification": "通知",
+  "notification_page_is_empty": "通知页面为空！"
 }

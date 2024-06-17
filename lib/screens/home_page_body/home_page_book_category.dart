@@ -51,7 +51,7 @@ class _HomePageBookCatrgoriesState extends State<HomePageBookCatrgories> {
           return const BookTypeWidget();
         } else if (snapshot.hasError) {
           return SizedBox(
-            height: 150.0,
+            height: 155.0,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 10,

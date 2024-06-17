@@ -57,5 +57,7 @@
   "your_phone_number_is_to_short": "Your phone number is too short!",
   "your_phone_number_is_too_long": "Your phone number is too long!",
   "reader": "Reader",
-  "which_book_do_you_want_to_read_today": "Which book do you want to read today?"
+  "which_book_do_you_want_to_read_today": "Which book do you want to read today?",
+  "notification": "Notification",
+  "notification_page_is_empty": "Notification page is empty!"
 }

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:get/get.dart';
 import "package:http/http.dart" as http;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:you_read_app_flutter/custome_widget/back_arrow.dart';
 import 'package:you_read_app_flutter/database/download_database_helper.dart';
 import 'package:you_read_app_flutter/models/add_to_favorite_model.dart';
 import 'package:you_read_app_flutter/models/download_model.dart';
@@ -111,6 +113,12 @@ class _ReadPageFromFavoriteState extends State<ReadPageFromFavorite> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: GestureDetector(
+          onTap: () {
+            Get.back();
+          },
+          child: const BackArrow(),
+        ),
         backgroundColor: Colors.blue[400],
         title: Text(
           widget.name,

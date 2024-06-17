@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:easy_localization/easy_localization.dart' as easy_localization;
+import 'package:get/get.dart';
 import "package:http/http.dart" as http;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,7 @@ import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:you_read_app_flutter/classes/save_file_to_storage.dart';
+import 'package:you_read_app_flutter/custome_widget/back_arrow.dart';
 import 'package:you_read_app_flutter/database/download_database_helper.dart';
 import 'package:you_read_app_flutter/database/favorite_database_helper.dart';
 import 'package:you_read_app_flutter/models/add_to_favorite_model.dart';
@@ -113,6 +115,12 @@ class _ReadPageFromHomePageState extends State<ReadPageFromHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: GestureDetector(
+          onTap: () {
+            Get.back();
+          },
+          child: const BackArrow(),
+        ),
         backgroundColor: Colors.blue[400],
         title: Text(
           widget.name,
@@ -164,12 +172,6 @@ class _ReadPageFromHomePageState extends State<ReadPageFromHomePage> {
                             iconData: Icons.download,
                             title: "Download Book",
                             onTapEvent: () {
-                              // downloadFile(
-                              //   fileUrl:
-                              //       "http://192.168.43.83:8080/files/${widget.file}",
-                              //   imageUrl:
-                              //       "http://192.168.43.83:8080/images/${widget.image}",
-                              // );
                               DownloadService.downloadFile(
                                 fileUrl:
                                     "http://192.168.43.83:8080/files/${widget.file}",

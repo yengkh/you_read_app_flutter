@@ -60,5 +60,7 @@ abstract class  LocaleKeys {
   static const your_phone_number_is_too_long = 'your_phone_number_is_too_long';
   static const reader = 'reader';
   static const which_book_do_you_want_to_read_today = 'which_book_do_you_want_to_read_today';
+  static const notification = 'notification';
+  static const notification_page_is_empty = 'notification_page_is_empty';
 
 }

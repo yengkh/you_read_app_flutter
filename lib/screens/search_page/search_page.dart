@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:you_read_app_flutter/api/search_book_by_name.dart';
+import 'package:you_read_app_flutter/custome_widget/back_arrow.dart';
 import 'package:you_read_app_flutter/custome_widget/home_page/custome_widget.dart';
 import 'package:you_read_app_flutter/models/book_model.dart';
 import 'package:easy_localization/easy_localization.dart' as easy_localization;
@@ -43,14 +44,11 @@ class SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
+        leading: GestureDetector(
+          onTap: () {
             Get.back();
           },
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
+          child: const BackArrow(),
         ),
         title: TextFormField(
           autofocus: true,

@@ -1,7 +1,7 @@
+import "package:path/path.dart";
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
-import "package:path/path.dart";
 import 'package:you_read_app_flutter/models/favorite_model.dart';
 
 class FavoriteDatabaseHelper {
